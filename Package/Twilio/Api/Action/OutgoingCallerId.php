@@ -21,7 +21,7 @@ class OutgoingCallerId extends Listing
 	 */
 	public function create($phoneNumber, array $parameters = array())
 	{
-		return parent::create(
+		return parent::createResource(
 			array(
 					'PhoneNumber' => $phoneNumber,
 				) + $parameters

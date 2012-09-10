@@ -21,7 +21,7 @@ class Application extends Listing
 	 */
 	public function create($name, array $parameters = array())
 	{
-		return parent::create(
+		return parent::createResource(
 			array(
 				'FriendlyName' => $name
 				) + $parameters

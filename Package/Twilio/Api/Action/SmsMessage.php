@@ -33,7 +33,7 @@ class SmsMessage extends Listing
 	 */
 	public function create($from, $to, $body, array $parameters = array())
 	{
-		return parent::create(
+		return parent::createResource(
 			array(
 					'From' => $from,
 					'To' => $to,

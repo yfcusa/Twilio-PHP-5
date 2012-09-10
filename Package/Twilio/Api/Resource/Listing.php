@@ -82,7 +82,7 @@ abstract class Listing extends Resource implements IteratorAggregate
 	 * @param array $parameters The parameters with which to create the resource
 	 * @return Instance
 	 */
-	protected function create(array $parameters)
+	protected function createResource(array $parameters)
 	{
 		$uri = $this->uri();
 

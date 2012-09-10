@@ -43,7 +43,7 @@ class Call extends Listing
 			$parameters['Url'] = $url;
 		}
 
-		return parent::create($parameters);
+		return parent::createResource($parameters);
 	}
 }
 
