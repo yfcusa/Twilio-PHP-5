@@ -1,15 +1,13 @@
 {
-    "name": "twilio/php",
+    "name": "camcima/twilio-php",
     "type": "library",
     "description": "Refactored Twilio PHP 5 package",
     "keywords": ["twilio", "sms", "cloud", "voip", "php"],
-    "homepage": "https://github.com/AlekseyKorzun/Twilio-PHP-5",
+    "homepage": "https://github.com/camcima/Twilio-PHP-5",
     "license": "MIT",
     "authors": [
         {
-            "name": "Aleksey Korzun",
-            "email": "al.ko@webfoundation.net",
-            "homepage": "http://www.alekseykorzun.com",
+            "name": "Carlos Cima",
             "role": "Developer"
         }
     ],
