@@ -24,7 +24,8 @@ abstract class Listing extends Resource implements IteratorAggregate
 	public function __construct()
 	{
 		if (!isset($this->resource)) {
-			$this->resource = get_class($this) . '\\' . array_pop(explode('\\', get_class($this)));
+                        $tempArray = explode('\\', get_class($this));
+			$this->resource = get_class($this) . '\\' . array_pop($tempArray);
 		}
 
 		parent::__construct();
