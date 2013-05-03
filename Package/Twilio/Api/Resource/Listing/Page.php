@@ -66,7 +66,11 @@ class Page implements IteratorAggregate
 	 */
 	public function __get($property)
 	{
-		return $this->page->$property;
+		if (property_exists($this->page, $property)) {
+			return $this->page->$property;
+		}
+
+		return null;
 	}
 
 	/**
