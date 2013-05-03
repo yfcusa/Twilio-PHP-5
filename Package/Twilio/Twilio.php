@@ -171,6 +171,8 @@ class Twilio
 
 		if (!is_array($headers) || empty($headers['Content-Type'])) {
 			throw new DomainException('Response header is missing Content-Type');
+		} else if ($headers['Content-Type'] != 'application/json') {
+			throw new DomainException('Response was Content-Type: ' . $headers['Content-Type']);
 		}
 
 		return $this->processJsonResponse($status, $headers, $body);
