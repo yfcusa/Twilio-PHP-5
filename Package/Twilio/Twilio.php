@@ -2,6 +2,7 @@
 namespace Twilio;
 
 use \Exception;
+use \DomainException;
 use Twilio\Api\Action\Account;
 use Twilio\Api\Exception\Response as ResponseException;
 use Twilio\Client\Client;
