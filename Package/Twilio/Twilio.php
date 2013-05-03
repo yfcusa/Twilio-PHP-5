@@ -171,8 +171,10 @@ class Twilio
 
 		if (!is_array($headers) || empty($headers['Content-Type'])) {
 			throw new DomainException('Response header is missing Content-Type');
-		} else if ($headers['Content-Type'] != 'application/json') {
-			throw new DomainException('Response was Content-Type: ' . $headers['Content-Type']);
+		}
+		list($contentType) = explode(';', $headers['Content-Type']);
+		if ($contentType != 'application/json') {
+			throw new DomainException('Response was Content-Type: ' . $contentType);
 		}
 
 		return $this->processJsonResponse($status, $headers, $body);
@@ -226,7 +228,7 @@ class Twilio
 				return $uri . '?' . http_build_query($parameters, '', '&');
 			}
 		}
-
+var_dump($uri);
 		return $uri;
 	}
 
