@@ -122,8 +122,18 @@ abstract class Listing extends Resource implements IteratorAggregate
 		}
 
 		// Retrieve resource alias
-		$resource = (array) $page;
-		$resource = array_shift(array_keys($resource));
+		$resource = false;
+
+		foreach ($page as $key => $value) {
+			if (is_array($value)) {
+				$resource = $key;
+				break;
+			}
+		}
+
+		if($resource === false) {
+			return null;
+		}
 
 		// Create a new PHP object for each JSON object in the API response
 		$page->$resource = array_map(
