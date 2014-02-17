@@ -131,7 +131,7 @@ abstract class Listing extends Resource implements IteratorAggregate
 			}
 		}
 
-		if($resource === false) {
+		if ($resource === false) {
 			return null;
 		}
 
