@@ -7,7 +7,7 @@ use Twilio\Api\Action\Account;
 use Twilio\Api\Exception\Response as ResponseException;
 use Twilio\Client\Client;
 use Twilio\Client\TinyHttp;
-use DomainException;
+#use DomainException;
 
 /**
  * Twilio API client
