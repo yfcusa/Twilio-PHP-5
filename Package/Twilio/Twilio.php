@@ -81,9 +81,9 @@ class Twilio
 			// Setup client parameters
 			$parameters = array(
 				'curl' => array(
-					'CURLOPT_USERAGENT' => self::USER_AGENT,
-					'CURLOPT_HTTPHEADER' => array('Accept-Charset: utf-8'),
-					'CURLOPT_CAINFO' => dirname(__FILE__) . '/Certificate/Twilio.crt'
+					CURLOPT_USERAGENT => self::USER_AGENT,
+					CURLOPT_HTTPHEADER => array('Accept-Charset: utf-8'),
+					CURLOPT_CAINFO => dirname(__FILE__) . '/Certificate/Twilio.crt'
 				)
 			);
 
