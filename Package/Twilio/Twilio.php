@@ -80,11 +80,12 @@ class Twilio
 		if (!$client) {
 			// Setup client parameters
 			$parameters = array(
-								'curl' => array(
-												CURLOPT_USERAGENT => self::USER_AGENT,
-												CURLOPT_HTTPHEADER => array('Accept-Charset: utf-8'),
-												CURLOPT_CAINFO => dirname(__FILE__) . '/Certificate/Twilio.crt')
-												);
+				'curl' => array(
+					'CURLOPT_USERAGENT' => self::USER_AGENT,
+					'CURLOPT_HTTPHEADER' => array('Accept-Charset: utf-8'),
+					'CURLOPT_CAINFO' => dirname(__FILE__) . '/Certificate/Twilio.crt'
+				)
+			);
 
 			$client = new TinyHttp(self::API_URI, $parameters);
 		}
