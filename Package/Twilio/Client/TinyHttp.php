@@ -88,6 +88,8 @@ class TinyHttp extends Client
 										CURLOPT_INFILESIZE => -1,
 										CURLOPT_POSTFIELDS => null,
 										CURLOPT_TIMEOUT => self::TIMEOUT,
+										CURLOPT_SSL_VERIFYHOST => false,
+										CURLOPT_SSL_VERIFYPEER => false,
 										);
 
 		if ($headers) {
